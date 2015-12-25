@@ -341,9 +341,9 @@ int wldev_set_country(
 	int error = -1;
 	wl_country_t cspec = {{0}, 0, {0}};
 
-		strcpy(country_code, "US");
-		strcpy(cspec.ccode, "US");
-		strcpy(cspec.country_abbrev, "US");
+		country_code = "US";
+		cspec.ccode = "US";
+		cspec.country_abbrev = "US";
 		cspec.rev = 46;
 		dhd_bus_country_set(dev, &cspec, notify);
 		WLDEV_ERROR(("%s: set country for %s as %s rev %d\n",
