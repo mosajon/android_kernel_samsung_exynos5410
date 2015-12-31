@@ -87,6 +87,8 @@ static int composite_string_index;
 /* DM_PORT NUM : /dev/ttyGS* port number */
 #define DM_PORT_NUM            1
 
+#define ANDROID_DEVICE_NODE_NAME_LENGTH 11
+
 /* f_midi configuration */
 #define MIDI_INPUT_PORTS    1
 #define MIDI_OUTPUT_PORTS   1
