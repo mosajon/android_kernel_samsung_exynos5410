@@ -580,4 +580,18 @@ config KEYBOARD_W90P910
 	  To compile this driver as a module, choose M here: the
 	  module will be called w90p910_keypad.
 
+config SENSORS_HALL
+	tristate "HALL"
+	help
+	  Say Y here to enable the HALL.
+
+config SENSORS_HALL_IRQ_CTRL
+	bool "SENSORS_HALL_IRQ_CTRL"
+	depends on !SEC_FACTORY
+	default n
+	help
+	  Say Y here to enable the IRQ control function
+
+source "drivers/input/keyboard/cypress/Kconfig"
+
 endif
