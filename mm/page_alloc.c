@@ -2269,7 +2269,7 @@ __alloc_pages_slowpath(gfp_t gfp_mask, unsigned int order,
 	bool sync_migration = false;
 	bool deferred_compaction = false;
 #ifdef CONFIG_ANDROID_WIP
-	unsigned long oom_invoke_timeout = jiffies + HZ/32;
+	unsigned long oom_invoke_timeout = jiffies + HZ/4;
 #endif
 
 	/*
@@ -2424,7 +2424,7 @@ rebalance:
 					goto nopage;
 			}
 #ifdef CONFIG_ANDROID_WIP
-			oom_invoke_timeout = jiffies + HZ/32;
+			oom_invoke_timeout = jiffies + HZ/4;
 #endif
 			goto restart;
 		}
